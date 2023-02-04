@@ -20,7 +20,7 @@ Text Domain: 4w4-Samuel-Antenor
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-html {
+ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -322,7 +322,6 @@ template {
   display: none;
 }
 
-/*@import "normalize/box-sizing";*/
 /* --------------------------------------------- base */
 h1 {
   font-size: clamp(0.75rem, -0.75rem + 4.8vw, 3.75rem);
@@ -366,14 +365,18 @@ h4,
 h5,
 h6 {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  margin: 0.5rem 0;
 }
 
 p {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-/*@import "base/espacement";*/
-/*@import "base/lien";*/
-/*@import "base/list";*/
 /* --------------------------------------------- composant */
-/*@import "composant/entete";*/
+.site__titre {
+  text-decoration: none;
+}
+
+.site__titre h1 {
+  font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
+}/*# sourceMappingURL=style.css.map */
