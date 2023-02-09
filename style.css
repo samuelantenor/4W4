@@ -32,6 +32,7 @@ html {
  */
 body {
   margin: 0;
+  
 }
 
 /**
@@ -39,6 +40,7 @@ body {
  */
 main {
   display: block;
+  background-color: grey;
 }
 
 /**
@@ -379,11 +381,10 @@ p {
 
 .site__titre h1 {
   font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
-  border: blue 4px solid;
 }
 
 .menu__entete {
-  border: red 4px solid;
+  border: black 4px solid;
   background-color: black;
 }
 .menu__entete .menu {
@@ -392,5 +393,12 @@ p {
   justify-content: flex-end;
 }
 .menu__entete .menu .menu-item a {
-  padding: 3px 5px;
+  padding: 10px;
+  background-color: white;
+  margin: 50px;
+  color: black;
+}
+.menu__entete .menu .menu-item a:hover {
+  background-color: rgb(179, 179, 179);
+  color: white;
 }
