@@ -1,6 +1,5 @@
 <footer class="site__footer">
-<section>Colonne 1</section>
-<section>Colonne 2</section>
-<section>Colonne 3</section>
+<section>4W4 Samuel Antenor</section>
+
 </footer>
 <?php wp_footer(); ?>

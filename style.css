@@ -32,7 +32,6 @@ html {
  */
 body {
   margin: 0;
-  
 }
 
 /**
@@ -40,7 +39,6 @@ body {
  */
 main {
   display: block;
-  background-color: grey;
 }
 
 /**
@@ -383,22 +381,45 @@ p {
   font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
 }
 
-.menu__entete {
-  border: black 4px solid;
-  background-color: black;
-}
 .menu__entete .menu {
   display: flex;
   list-style-type: none;
   justify-content: flex-end;
 }
 .menu__entete .menu .menu-item a {
-  padding: 10px;
+  padding: 25px;
   background-color: white;
   margin: 50px;
   color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  box-shadow: 10px 15px 20px;
 }
 .menu__entete .menu .menu-item a:hover {
   background-color: rgb(179, 179, 179);
   color: white;
+}
+
+/* --------------------------------------------- Css */
+main {
+  background-color: grey;
+}
+
+Header {
+  background-color: rgb(62, 62, 62);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  padding: 25px;
+}
+
+body {
+  background-color: gray;
+}
+
+.custom-logo {
+  display: block;
+  border-radius: 50%;
 }
