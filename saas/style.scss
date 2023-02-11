@@ -25,25 +25,14 @@ Text Domain: 4w4-Samuel-Antenor
 
 /* --------------------------------------------- composant */
  @import "composant/entete";
+ @import "composant/main";
+ @import "composant/header";
+ @import "composant/footer";
+ @import "composant/body";
+ 
 /* --------------------------------------------- Css */
-main{
-    background-color: grey;
-   
 
-}
-Header{
-    
-    background-color: rgb(62, 62, 62);
-}
-footer{
-   background-color: black;
-   color: white;
-   padding: 25px;
-}
-body{
-    background-color: gray;
-}
-.custom-logo{
-    display: block;
-    border-radius: 50%;
-}
+
+
+
+
