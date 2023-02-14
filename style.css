@@ -423,4 +423,15 @@ body {
   background-color: gray;
 }
 
-/* --------------------------------------------- Css */
+.BlockFlex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+article {
+  flex: 1 0 250px;
+  padding: 5px;
+  margin: 10px;
+  border: black 5px solid;
+}
