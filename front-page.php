@@ -14,10 +14,10 @@
             <article>
                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                 
-                <?php the_excerpt() ?>
-                <?php wp_trim_words(get_the_excerpt(),10,"..."); ?>
+                
+                <?= wp_trim_words(get_the_excerpt(),10,"..."); ?>
             </article>
-            <hr>
+            
             <?php endwhile; ?>
            <?php  endif; ?>
            </section>
