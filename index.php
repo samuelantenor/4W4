@@ -7,7 +7,9 @@
 <?php get_header(); ?>
     <main>
         <pre>index.php</pre>
-        <h1>Bienvenue sur 4W4</h1>
+        <div class="Bienvenue">
+        <h1 >Bienvenue sur 4W4</h1>
+        </div>
         <?php 
         if (have_posts()):
             while(have_posts()):

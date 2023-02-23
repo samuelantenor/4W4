@@ -3,10 +3,16 @@ Header{
     background-color: rgb(62, 62, 62);
     
 }
+
 .sectionTopFrontPage{
 display: flex;
 justify-content: flex-end;
 align-items: center;
+}
+.sectionHeaderTop{
+    display: flex;
+align-content: center;
+justify-content: space-between;
 }
 .custom-logo{
     display: flex;
@@ -16,6 +22,7 @@ align-items: center;
    width: 100%;
    max-width: 300px;
     display: inline-flex;
+    margin-left: 20px;
 }
 .recherche__input{
     flex-grow: 1;

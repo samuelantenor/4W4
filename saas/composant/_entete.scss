@@ -6,12 +6,13 @@
    
 }
 .menu__entete{//nav
-
+display: flex;
     .menu{//ul
         
         display: flex;
+        flex: 1 0 800px;
         list-style-type: none;
-        justify-content: flex-end;
+        justify-content: flex-start;
         
         .menu-item::before {
             content: "";
@@ -23,13 +24,13 @@
             .menu-item{//li
 
                 a{
-            padding: 25px;
+            padding: 15px;
             background-color: white;
-            margin: 50px;
+            margin: 10px;
             color: black;
             border-radius: 5px;
             text-decoration: none;
-            box-shadow: 10px 15px 20px ;
+            //box-shadow: 10px 15px 20px ;
                 }
                 a:hover{
                     background-color: rgb(179, 179, 179);
