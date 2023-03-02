@@ -5,10 +5,10 @@
 ?>
 
 <?php get_header(); ?>
-    <main>
+    <main class="site__main">
         <pre>index.php</pre>
         <div class="Bienvenue">
-        <h1 >Bienvenue sur 4W4</h1>
+        <h1 class="Title__main">Bienvenue sur 4W4</h1>
         </div>
         <?php 
         if (have_posts()):

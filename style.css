@@ -419,9 +419,9 @@ li > ol {}
 li > ul {}
 */
 pre {
-  background-color: #555;
+  background-color: #000000;
   color: #eee;
-  overflow-x: scroll;
+  overflow-x: none;
 }
 
 /* --------------------------------------------- composant */
@@ -451,23 +451,38 @@ pre {
 }
 .menu__entete .menu .menu-item a {
   padding: 15px;
-  background-color: white;
+  background-color: rgb(48, 48, 48);
   margin: 10px;
-  color: black;
+  color: rgb(0, 255, 55);
   border-radius: 5px;
   text-decoration: none;
 }
 .menu__entete .menu .menu-item a:hover {
-  background-color: rgb(179, 179, 179);
-  color: white;
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 55);
 }
 
 main {
-  background-color: grey;
+  background-color: rgb(0, 0, 0);
+}
+main h1 {
+  color: rgb(0, 255, 55);
+}
+
+.Title__main {
+  color: rgb(0, 255, 55);
+}
+
+.site__titre {
+  color: rgb(0, 255, 55);
+}
+
+.site__titre:visited {
+  color: rgb(0, 255, 55);
 }
 
 Header {
-  background-color: rgb(62, 62, 62);
+  background-color: rgb(0, 0, 0);
 }
 
 .sectionTopFrontPage {
@@ -524,17 +539,22 @@ Header {
   user-select: none;
 }
 
+h3 {
+  color: rgb(0, 255, 55);
+}
+
 footer {
   background-color: black;
-  color: white;
+  color: rgb(0, 255, 55);
   padding: 25px;
 }
 
 body {
-  background-color: gray;
+  background-color: rgb(0, 0, 0);
+  font-family: "Space Mono", monospace;
 }
 
-.BlockFlex {
+.blocflex {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -544,16 +564,82 @@ article {
   flex: 1 0 250px;
   padding: 5px;
   margin: 10px;
-  border: black 5px solid;
+  border: rgb(0, 255, 30) 2px solid;
   background-color: black;
-  color: white;
-  box-shadow: 0 0 10px 0 black;
+  color: rgb(0, 255, 55);
+  box-shadow: 0 0 10px 2px rgb(34, 255, 0);
   transition: background-color 0.5s ease;
+  font-family: "Source Code Pro", monospace;
+}
+article a {
+  text-decoration: none;
+}
+article a:link {
+  color: rgb(0, 255, 55);
+}
+article a:visited {
+  color: rgb(0, 255, 55);
 }
 
 article:hover {
-  background-color: white;
+  background-color: rgb(0, 255, 55);
+  color: black;
+}
+article:hover a {
   color: black;
 }
 
-/* --------------------------------------------- Css */
+.blocflex__galerie {
+  flex: 1 0 100%;
+}
+
+.blocflex__article {
+  font-family: "Space Mono", monospace;
+}
+
+/* --------------------------------------------- layout */
+/**
+Mise en page générale avec display:grid
+
+*/
+.site__entete {
+  grid-area: header;
+  padding: 1rem clamp(1rem, 3vw, 20rem);
+  background-color: rgb(0, 0, 0);
+}
+
+.site__main {
+  grid-area: main;
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: rgb(0, 0, 0);
+}
+
+.site__aside {
+  grid-area: aside;
+  background-color: rgb(0, 0, 0);
+  border: rgb(0, 255, 55) solid 2px;
+}
+.site__aside a {
+  text-decoration: none;
+}
+.site__aside a:link {
+  color: rgb(0, 255, 55);
+}
+.site__aside a:visited {
+  color: rgb(0, 255, 55);
+}
+
+.site {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-areas: "header" "aside" "main" "footer";
+}
+@media screen and (min-width: 1000px) {
+  .site {
+    grid-template-columns: 20% auto;
+    grid-template-areas: "header header" "aside main" "footer footer";
+  }
+}

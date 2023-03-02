@@ -5,24 +5,18 @@
 ?>
 
 <?php get_header(); ?>
-    <main>
-        <pre>front-page.php</pre>
+    <main class="site__main">
         <h1>Bienvenue sur 4W4</h1>
-        <section class = "BlockFlex">
-    <?php if(have_posts()):
-            while (have_posts()): the_post(); ?>
-            <article>
-                <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                
-                
-                <?= wp_trim_words(get_the_excerpt(),10,"..."); ?>
-            </article>
-            
-            <?php endwhile; ?>
-           <?php  endif; ?>
-           </section>
+        <section class="blocflex">
+            <?php if(have_posts()):
+                while (have_posts()): the_post(); ?>
+               <?php  if (in_category('galerie')){
+                get_template_part("template-parts/categorie","galerie");
+               } else {
+                get_template_part("template-parts/categorie","note-4w4");
+               }?>
+                <?php endwhile; ?>
+            <?php  endif; ?>
+        </section>
     </main>
-    
-    <?php get_footer(); ?>
-</body>
-</html>
+<?php get_footer(); ?>

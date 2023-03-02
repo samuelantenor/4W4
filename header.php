@@ -8,9 +8,9 @@
     <title>mon 4W4</title>
     <?php wp_head(); ?>
 </head>
-<body>
+<body class='site'>
     
-    <header class="site_entete">
+    <header class="site__entete">
     <div class="sectionHeaderTop">
         <?php the_custom_logo(); ?>
         
@@ -30,3 +30,21 @@
     <h2><?= bloginfo('description'); ?></h2>
     
 </header>
+<aside class="site__aside">
+    <h3>Menu secondaire</h3>
+
+    <?php 
+        $category = get_queried_object();
+        if (isset($category)){
+            $menu = $category->slug;  
+        }
+        else {
+            $menu = "note-4w4";
+        }
+
+        echo $menu;
+        wp_nav_menu(array(
+        "menu"=>$menu,
+        "container"=>"nav"
+    )) ?>
+</aside>

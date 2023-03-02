@@ -31,11 +31,11 @@ Text Domain: 4w4-Samuel-Antenor
  @import "composant/header";
  @import "composant/footer";
  @import "composant/body";
- @import "composant/blockflex";
+ @import "composant/blocflex";
  @import "composant/formrecherche";
  
-/* --------------------------------------------- Css */
-
+ /* --------------------------------------------- layout */
+ @import "layout/aside-contenu";
 
 
 

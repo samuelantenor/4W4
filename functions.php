@@ -8,9 +8,12 @@ wp_enqueue_style('4w4-gr1-principal', // id
         array(), // définir les dépendances
         filemtime(get_template_directory() . '/style.css'), // le calcul de la version du fichier css
         'all'); // media
+wp_enqueue_style( 'google-fonts',
+	'https://fonts.googleapis.com/css2?family=Space+Mono&display=swap',
+	false );
 }        
 
-add_action( 'wp_enqueue_scripts', 'enfiler_css' );
+add_action( 'wp_enqueue_scripts', 'enfiler_css','google_fonts');
 
 /* ------------------------------------------------------------------------------------------------------- ENREGISTRMENT DES MENUS*/
 if ( ! function_exists( 'enregistre_menus' ) ) {
