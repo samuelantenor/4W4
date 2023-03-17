@@ -1,13 +1,11 @@
-# Laboratoire #1
+# TP#1
 ## 4W4-Conception d'interface et devloppement Web
 ### Auteur : Samuel Antenor
 
 #### Objectifs
-- Installer Wordpress localement
-- Realiser une première version d'un theme
+- Présentation de mon TP1/Site 4w4
+
 #### Liens de reference
-- Site du prof sur siteground
+- Mon site SiteGround
     - https://eddytuto.sg-host.com/
-- GitHub **eddytuto**
-- Pour ouvrir markdown preview : Ctrl + Shift + V
-- https://developer.wordpress.org/themes/basics/
+
