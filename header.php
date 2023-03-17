@@ -29,7 +29,7 @@ $nouvel_class="";
                 <?= get_search_form(); ?>  
                 
                 <label class="burger" for="chkBurger">
-                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=000" width="32" height="32">
+                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=d0d0d0" width="32" height="32">
                 </label> 
             </div>         
         </section>
