@@ -29,6 +29,7 @@
     display: flex;
         transform: translateX(800px);
         transition: transform .5s;
+        
         @media screen and (min-width: $largeur__tablette) {
            // position : static;
             transform: translateX(0); 

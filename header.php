@@ -14,7 +14,7 @@ $nouvel_class="";
     $nouvel_class = "no-aside";
  }?>
 
-<body class="site <?= $nouvel_class ?>  ">
+<body class="site <?= $nouvel_class ?>">
     <header class="site__entete">
     <section class="entete__nav">
             <?php the_custom_logo(); ?> 
@@ -40,7 +40,8 @@ $nouvel_class="";
 </header>
 
 <?php 
-if (!is_404() && !is_front_page()) {
-    get_template_part("template-parts/aside");
+if (! is_404() && ! is_front_page()){
+    get_template_part("template-parts/aside"); 
 }
+
 ?>

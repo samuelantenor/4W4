@@ -1,26 +1,101 @@
 .error-404 {
     text-align: center;
+   
+    h1 {
+      font-size: 3em;
+    }
+    
+    h2 {
+      font-size: 2em;
+      color: rgb(0, 233, 0);
+    }
+    
+    .menu {
+      display: flex;
+      justify-content: center;
+      
+      li {
+        margin-right: 10px;
+        
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    
+    .search-form-container-404 {
+      .aside {
+        display: none;
+      }
+      
+      .recherche {
+        width: 100%;
+        max-width: 750px;
+        display: inline-flex;
+        margin-left: 20px;
+      }
+      
+      .recherche__input {
+        flex-grow: 1;
+        padding-right: 500px;
+        outline: none;
+        border: 1px solid white;
+        border-radius: 5px 0 0 5px;
+        background-color: #cdcdcd;
+        color: black;
+        transition: background-color 0.25s, box-shadow 0.25s;
+        
+        &:focus {
+          background-color: white;
+          box-shadow: 0 0 2px #9c9c9c;
+        }
+      }
+      
+      .recherche__bouton {
+        width: 40px;
+        background-color: black;
+        color: white;
+        outline: none;
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 0 5px 5px 0;
+        cursor: pointer;
+        user-select: none;
+      }
+    }
+    
+    // Media Queries
+    @media (min-width: 768px) {
+        .recherche__input {
+            flex-grow: 1;
+            padding-right: 300px;
+            outline: none;
+            border: 1px solid white;
+            border-radius: 5px 0 0 5px;
+            background-color: #cdcdcd;
+            color: black;
+            transition: background-color 0.25s, box-shadow 0.25s;
+            
+      h1 {
+        font-size: 4em;
+      }
+      
+      h2 {
+        font-size: 2.5em;
+      }
+    }
+    
+    @media (min-width: 992px) {
+     
+      h1 {
+        font-size: 5em;
+      }
+      
+      h2 {
+        font-size: 3em;
+      }
+    }
   }
-  
-  .error-404 h1 {
-    font-size: 3em;
-  }
-  
-  .error-404 h2 {
-    font-size: 2em;
-    color: rgb(0, 233, 0);
-  }
-  
-  .menu {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .menu li {
-    margin-right: 10px;
-  }
-  
-  .menu li:last-child {
-    margin-right: 0;
-  }
-  
+}
