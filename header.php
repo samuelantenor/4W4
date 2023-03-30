@@ -40,8 +40,7 @@ $nouvel_class="";
 </header>
 
 <?php 
-if (! is_front_page()){
-    get_template_part("template-parts/aside"); 
+if (!is_404() && !is_front_page()) {
+    get_template_part("template-parts/aside");
 }
-
 ?>

@@ -10,7 +10,7 @@ get_header(); ?>
   <div class="error-404">
 
     <h1>Error 404</h1>
-    <h2>Page not found, you can try searching.</h2>
+    <h2>Page non trouvée, vous pouvez essayer de chercher.</h2>
 
     <div class="menu-cours">
       <?php

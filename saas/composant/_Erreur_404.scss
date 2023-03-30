@@ -1,0 +1,26 @@
+.error-404 {
+    text-align: center;
+  }
+  
+  .error-404 h1 {
+    font-size: 3em;
+  }
+  
+  .error-404 h2 {
+    font-size: 2em;
+    color: rgb(0, 233, 0);
+  }
+  
+  .menu {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .menu li {
+    margin-right: 10px;
+  }
+  
+  .menu li:last-child {
+    margin-right: 0;
+  }
+  
