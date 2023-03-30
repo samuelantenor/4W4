@@ -43,5 +43,7 @@ $nouvel_class="";
 if (! is_404() && ! is_front_page()){
     get_template_part("template-parts/aside"); 
 }
-
-?>
+elseif (is_404()) {
+   
+}
+?> 

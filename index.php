@@ -6,7 +6,6 @@
 
 <?php get_header(); ?>
     <main class="site__main">
-        <pre>index.php</pre>
         <div class="Bienvenue">
         <h1 class="Title__main">Bienvenue sur 4W4</h1>
         </div>
