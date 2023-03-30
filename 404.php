@@ -11,6 +11,11 @@ get_header(); ?>
 
     <h1>Error 404</h1>
     <h2>Page non trouvée, vous pouvez essayer de chercher.</h2>
+    
+    <div class="search-form-container">
+    <?php get_search_form(); ?>
+    </div>
+
 
     <div class="menu-cours">
       <?php
