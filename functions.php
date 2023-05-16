@@ -37,7 +37,10 @@ add_theme_support( 'custom-logo', array(
     'height' => 150,
     'width'  => 150
 ) );
+/* permet d'utiliser la fonction image en arrière plan dans personnalisé */
 add_theme_support('custom-background');
+add_theme_support( 'post-thumbnails' );
+set_post_thumbnail_size( 150, 150, true ); // image peut être cropé 
 
 
 /**
@@ -52,7 +55,7 @@ function cidweb_modifie_requete_principal( $query ) {
                 && $query->is_main_query() // si requête principale
                 && ! is_admin() ) { // si pas dans le tableau de bord
           // $query->set permet de modifier la requête principale               
-          $query->set( 'category_name', 'note-4w4' ); // filtre les articles de categorie «4w4» slug
+          $query->set( 'category_name', 'accueil' ); // filtre les articles de categorie «4w4» slug
           $query->set( 'orderby', 'title' ); // trier selon le champ title
           $query->set( 'order', 'ASC' ); // trier en ordre ascendant
           }
@@ -75,6 +78,74 @@ $sigle = substr($title,4,3);
 $title = substr($title, 7);
 $title = "<code>" .$sigle. "</code>" . "<p>" . wp_trim_words($title, 1, ' ... ') . "</p>" ; // A modifier am.liorer pour le tp1
 }
+if($args->menu == 'note-4w4') { 
+    if (substr($title,0,1) == '0'){
+        $title = substr($title, 1);
+    }    
+}
+
+
 return $title;
 }
 add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);         
+
+
+/**
+ * Ajouter la description et l'image mise en avant à chacun des choix du menu « evenement »
+ */
+function add_menu_description_and_thumbnail( $item_output, $item, $depth, $args ) {
+    if ( 'evenement' == $args->menu)
+    {
+        $post_thumbnail_id = get_post_thumbnail_id( $item->object_id );
+        if ( $post_thumbnail_id ) {
+            $post_thumbnail_url = wp_get_attachment_image_src( $post_thumbnail_id, 'thumbnail' );
+            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . '</span><span class="description">' . $item->description . '</span><img src="' . esc_url( $post_thumbnail_url[0] ) . '" class="menu-thumbnail" />', $item_output );
+        } else {
+            $item_output = str_replace( '">' . $args->link_before . $item->title, '">' . $args->link_before . '<span class="title">' . $item->title . '</span><span class="description">' . $item->description . '</span>', $item_output );
+        }
+    }
+    return $item_output;
+}
+add_filter( 'walker_nav_menu_start_el', 'add_menu_description_and_thumbnail', 10, 4 );
+
+/**
+ * Configurer ACF pour ajouter l'option de variable globale
+ * 
+ */
+
+
+
+/* --------------------------------------- Enregistrement des widget */
+// Enregistrer le sidebar
+function enregistrer_sidebar() {
+    register_sidebar( array(
+        'name' => __( 'Footer 1', 'nom-de-mon-theme' ),
+        'id' => 'footer_1',
+        'description' => __( 'Une zone de widget pour afficher des widgets dans le pied de page.', 'nom-de-mon-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Footer 2', 'nom-de-mon-theme' ),
+        'id' => 'footer_2',
+        'description' => __( 'Une zone de widget pour afficher des widgets dans le pied de page.', 'nom-de-mon-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+
+    register_sidebar( array(
+        'name' => __( 'Footer 3', 'nom-de-mon-theme' ),
+        'id' => 'footer_3',
+        'description' => __( 'Une zone de widget pour afficher des widgets dans le pied de page.', 'nom-de-mon-theme' ),
+        'before_widget' => '<div id="%1$s" class="widget %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h2 class="widget-title">',
+        'after_title' => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'enregistrer_sidebar' );

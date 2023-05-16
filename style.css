@@ -608,6 +608,52 @@ footer {
   border: rgb(0, 255, 55) dashed 5px;
 }
 
+.colonne1 {
+  display: flex;
+  padding: 30px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.colonne1 section {
+  padding: 10px;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  justify-content: space-between;
+}
+
+.site__footer {
+  border: 5px dotted rgb(0, 255, 55);
+  color: rgb(0, 255, 55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu-footer-container {
+  color: rgb(0, 255, 55);
+}
+
+.Ligne {
+  background-color: #ffffff;
+  width: 90vw;
+  height: 2px;
+}
+
+.Choix a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgb(0, 255, 55);
+}
+
 body {
   background-color: rgb(0, 0, 0);
   font-family: "Space Mono", monospace;
@@ -724,10 +770,17 @@ article:hover a {
   justify-content: center;
 }
 .error-404 .menu li {
+  display: inline-flex;
   margin-right: 10px;
 }
 .error-404 .menu li:last-child {
   margin-right: 0;
+}
+.error-404 .custom-background .site {
+  background-image: url(../image/matrix.jpg);
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 .error-404 .search-form-container-404 .aside {
   display: none;
@@ -862,3 +915,4 @@ Mise en page générale avec display:grid
     transition: height 1s ease;
   }
 }
+/*---------------------------------------------- Carousel*/

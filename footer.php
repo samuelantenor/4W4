@@ -1,13 +1,29 @@
 <footer class="site__footer">
+<div class="colonne1">
 <?php the_custom_logo() ?>
+<section>Samuel-André Anténor</section>
+<section>Conception d'interface et développement web</section>
 
+</div>
+<div class="Choix">
 <?php wp_nav_menu(array(
-    "menu"=>"entete",
-    "container"=>"nav",
-    "container_class" => "menu__entete"
+    "menu"=>"footer",
+    "container"=>"nav"
      ))?>
-<section>Samuel Antenor</section>
-<section> 4W4 - Conception d'interface et développement web</section>
+</div>
 
+
+
+<div class="Ligne"></div>
+
+<div class="colonne2">
+<section>
+    <div class="sidebar">
+    <?php  dynamic_sidebar('footer_1'); ?>  
+    </div>
+</section>
+
+
+</div>
 </footer>
 <?php wp_footer(); ?>
