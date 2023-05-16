@@ -9,6 +9,13 @@ $titre = get_the_title();
 // if (substr($titre,0,1) == '0') {}...
 ?>
 <article class="blocflex__article">
+    <?php if(has_post_thumbnail()){
+        
+    } else{
+        echo get_the_post_thumbnail(192,'thumbnail');
+    }
+  ?>
+    <?php the_post_thumbnail('thumbnail') ?>
     <h5><a href="<?php the_permalink(); ?>"> <?= $titre; ?></a></h5>
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>
 </article>
