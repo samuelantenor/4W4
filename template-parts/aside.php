@@ -14,4 +14,10 @@
         "menu"=>$menu,
         "container"=>"nav"
     )) ?>
+
+<section>
+    <div class="sidebar">
+    <?php  dynamic_sidebar('footer_2'); ?>  
+    </div>
+</section>
 </aside>

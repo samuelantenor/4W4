@@ -625,6 +625,11 @@ footer {
   flex-direction: row;
   margin: 10px;
   justify-content: space-between;
+  border: red 4px solid;
+}
+.sidebar ul {
+  border: red 4px solid;
+  list-style-type: none;
 }
 
 .site__footer {

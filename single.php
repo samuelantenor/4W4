@@ -6,10 +6,11 @@
 
 <?php get_header(); ?>
     <main>
-        <h1>Bienvenue sur 4W4</h1>
+        
     <?php if(have_posts()):
             while (have_posts()): the_post(); ?>
             <div class="single-php">
+                <?php the_post_thumbnail('thumbnail'); ?>
                 <h3><?php the_title(); ?></h3>
                 <?php the_content(); ?>
     </div>

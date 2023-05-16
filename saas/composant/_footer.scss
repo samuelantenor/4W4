@@ -14,6 +14,7 @@ footer{
 
 }
 
+
 .colonne1 section{
     padding: 10px;
 }
@@ -22,6 +23,11 @@ footer{
     flex-direction: row;
     margin: 10px;
     justify-content: space-between;
+   border: red 4px solid;
+   ul{
+    border: red 4px solid;
+    list-style-type: none;
+   }
 }
 .site__footer{
 
