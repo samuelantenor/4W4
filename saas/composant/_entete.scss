@@ -46,7 +46,7 @@
 /* ///////////////////////////////// menu__entete */
 .menu__entete{ // nav
     display: flex;
-        transform: translateX(100%);
+        transform: translateX(150%);
         transition: transform .5s;
         
         @media screen and (min-width: $largeur__tablette) {
