@@ -26,13 +26,14 @@ $nouvel_class="";
                                 "container_class" => "menu__entete"
 
                             )); ?>
-                <?= get_search_form(); ?>  
+                 
                 
                 <label class="burger" for="chkBurger">
                     <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=d0d0d0" width="32" height="32">
                 </label> 
             </div>         
         </section>
+        <div class="barreRecherche"><?= get_search_form(); ?></div> 
     
     <h1><a class="site__titre" href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a></h1>
     <h2><?= bloginfo('description'); ?></h2>
