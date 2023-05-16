@@ -1,31 +1,59 @@
 <footer class="site__footer">
-<div class="colonne1">
-<?php the_custom_logo() ?>
-<section>Samuel-André Anténor</section>
-<section>Conception d'interface et développement web</section>
 
-</div>
-<div class="Choix">
-<?php  wp_nav_menu(array( 
-                                "menu" => "entete",
-                                "container" => "nav",
-                                "container_class" => "menu__entete"
+<section class="colonne">
 
-                            )); ?>
-</div>
+    <section class="choix"><?php  
+                wp_nav_menu(array( 
+                    "menu" => "entete",
+                    "container" => "nav",
+                )); 
+            ?>
+        </div>
+
+    </section>
+    
+    <section class="info">
+        <ul>
+            <li>Samuel-André Anténor</li>
+            <li>Concepetion d'interface</li>
+        </ul>
+    </section>
+
+    <section class="lien"> 
+        <?php the_custom_logo();?> 
+        <?= get_search_form(); ?> 
+    </section>
 
 
+ 
 
-<div class="Ligne"></div>
-
-<div class="colonne2">
-<section>
-    <div class="sidebar">
-    <?php  dynamic_sidebar('footer_1'); ?>  
-    </div>
 </section>
 
+<section class="colonne">
 
-</div>
+    <section class="footer_colonne">
+      <div class="sidebar">
+      <?php dynamic_sidebar( 'footer_1' ); ?>
+      </div>
+    </section>
+
+    <section class="footer_colonne">
+      <div class="sidebar">
+      <?php dynamic_sidebar( 'footer_2' ); ?>
+      </div>
+    </section>
+
+    <section class="footer_colonne">
+      <div class="sidebar">
+      <?php dynamic_sidebar( 'footer_3' ); ?>
+      </div>
+    </section>
+
+</section>
+
 </footer>
-<?php wp_footer(); ?>
+
+    <?php wp_footer(); ?> 
+
+</body>
+</html>

@@ -1,8 +1,8 @@
 body{
     font-family: 'Space Mono', monospace;
-    .custom-background{
-        
-    } 
+    li::before{
+        display: none;
+    }
     
     
 }
