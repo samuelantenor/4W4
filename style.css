@@ -449,6 +449,10 @@ pre {
   }
 }
 
+.custom-background {
+  opacity: 100%;
+}
+
 /* ///////////////////////////////// menu__entete */
 .menu__entete {
   display: flex;
@@ -539,6 +543,10 @@ main h1 {
   color: rgb(0, 255, 55);
 }
 
+.site__main {
+  color: rgb(0, 255, 55);
+}
+
 Header {
   background-color: rgb(0, 0, 0);
 }
@@ -625,15 +633,11 @@ footer {
   flex-direction: row;
   margin: 10px;
   justify-content: space-between;
-  border: red 4px solid;
-}
-.sidebar ul {
-  border: red 4px solid;
   list-style-type: none;
 }
 
 .site__footer {
-  border: 5px dotted rgb(0, 255, 55);
+  border: 5px dashed rgb(0, 255, 55);
   color: rgb(0, 255, 55);
   display: flex;
   flex-direction: column;
@@ -657,13 +661,13 @@ footer {
   justify-content: space-between;
   padding: 20px;
   background-color: rgb(0, 255, 55);
+  text-decoration: none;
+  border-radius: 10px;
 }
 
 body {
-  background-color: rgb(0, 0, 0);
   font-family: "Space Mono", monospace;
 }
-
 .blocflex {
   display: flex;
   justify-content: space-between;
@@ -850,6 +854,42 @@ article:hover a {
   }
 }
 
+.menu-evenement-container {
+  background-color: transparent;
+}
+.menu-evenement-container .menu {
+  display: flex;
+  justify-content: space-between;
+}
+.menu-evenement-container .menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #15ff00;
+  flex: 1 0 200px;
+  height: auto;
+  margin: 10px;
+}
+.menu-evenement-container .menu .menu-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: #15ff00;
+}
+.menu-evenement-container .menu .menu-item a .title {
+  font-size: 1.5rem;
+}
+.menu-evenement-container .menu .menu-item a .description {
+  font-size: 0.8rem;
+}
+.menu-evenement-container .menu .menu-item a .menu-thumbnail {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
 /* --------------------------------------------- layout */
 /**
 Mise en page générale avec display:grid
@@ -907,17 +947,13 @@ Mise en page générale avec display:grid
   }
 }
 
-@media only screen and (min-width: 800px) {
-  .site__aside {
-    display: block;
-    height: 60px;
-    overflow: hidden;
-    transition: height 1s ease;
-  }
-  .site__aside:hover {
-    height: auto; /* Adjust this value as per your requirement */
-    overflow: auto;
-    transition: height 1s ease;
-  }
+/*---------------------------------------------- normalize*/
+/* Définition du box sizing */
+::before,
+::after {
+  box-sizing: inherit;
 }
-/*---------------------------------------------- Carousel*/
+
+html {
+  box-sizing: border-box;
+}

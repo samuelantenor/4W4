@@ -6,10 +6,12 @@
 
 </div>
 <div class="Choix">
-<?php wp_nav_menu(array(
-    "menu"=>"footer",
-    "container"=>"nav"
-     ))?>
+<?php  wp_nav_menu(array( 
+                                "menu" => "entete",
+                                "container" => "nav",
+                                "container_class" => "menu__entete"
+
+                            )); ?>
 </div>
 
 

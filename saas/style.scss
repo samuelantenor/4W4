@@ -36,9 +36,11 @@ Text Domain: 4w4-Samuel-Antenor
  @import "composant/single";
  @import "composant/menu_cours";
  @import "composant/Erreur_404";
+ @import "composant/menu_evenement";
  /* --------------------------------------------- layout */
  @import "layout/aside-contenu";
- /*---------------------------------------------- Carousel*/
+ /*---------------------------------------------- normalize*/
+ @import "normalize/boxsizing";
 
 
 
