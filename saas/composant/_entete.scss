@@ -1,3 +1,20 @@
+/////////////Mise en page de l'entete ///////////////////////////
+
+.site__entete{
+
+    grid-area: header;
+    background-color: transparent;
+}
+/////////////Mise en page du main  ///////////////////////////////
+
+.site__main{
+
+    grid-area: main;
+    // padding: 1rem clamp(1rem, 3vw, 20rem);
+    background-color:rgb(0, 0, 0);
+}
+
+
 .entete__nav{ // log, menu, form de recherche, bouton burger
     display : flex;
     justify-content: space-between;

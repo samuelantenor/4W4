@@ -425,6 +425,16 @@ pre {
 }
 
 /* --------------------------------------------- composant */
+.site__entete {
+  grid-area: header;
+  background-color: transparent;
+}
+
+.site__main {
+  grid-area: main;
+  background-color: rgb(0, 0, 0);
+}
+
 .entete__nav {
   display: flex;
   justify-content: space-between;
@@ -611,33 +621,41 @@ h3 {
   flex-direction: column;
   align-items: center;
 }
+
 .site__footer .colonne {
   display: flex;
   justify-content: space-between;
   width: 100%;
   padding: 1rem;
 }
+
 .site__footer .colonne .lien {
   padding-right: 1rem;
   display: flex;
   flex-direction: column;
 }
+
 .site__footer .colonne .info {
   text-align: center;
 }
+
 .site__footer .colonne .info li {
   color: #ffffff;
 }
+
 .site__footer .colonne .footer_colonne {
   width: 30%;
   padding-right: 1rem;
 }
+
 .site__footer .colonne .footer_colonne div div ul li a {
   color: #aaa;
 }
+
 .site__footer .colonne .choix {
   display: flex;
 }
+
 .site__footer .colonne .choix a {
   text-decoration: none;
   color: rgb(0, 255, 55);
@@ -914,40 +932,6 @@ article:hover a {
 }
 
 /* --------------------------------------------- layout */
-/**
-Mise en page générale avec display:grid
-
-*/
-.site__entete {
-  grid-area: header;
-  padding: 1rem clamp(1rem, 3vw, 20rem);
-  background-color: rgb(0, 0, 0);
-}
-
-.site__main {
-  grid-area: main;
-}
-
-.site__footer {
-  grid-area: footer;
-  background-color: rgb(0, 0, 0);
-}
-
-.site__aside {
-  grid-area: aside;
-  background-color: rgb(0, 0, 0);
-  border: rgb(0, 255, 55) solid 2px;
-}
-.site__aside a {
-  text-decoration: none;
-}
-.site__aside a:link {
-  color: rgb(0, 255, 55);
-}
-.site__aside a:visited {
-  color: rgb(0, 255, 55);
-}
-
 .site {
   display: grid;
   grid-template-columns: auto;
@@ -967,6 +951,36 @@ Mise en page générale avec display:grid
   .no-aside {
     grid-template-columns: auto;
     grid-template-areas: "header" "main" "footer";
+  }
+}
+
+.site__aside {
+  height: 2rem;
+  grid-area: aside;
+  transition: all 0.2s;
+  background-color: rgb(0, 0, 0);
+}
+.site__aside h3 {
+  text-align: center;
+  color: rgb(0, 225, 55);
+  -webkit-text-stroke: 1px;
+  -webkit-text-stroke-color: black;
+  border-bottom: rgb(0, 225, 55) 3px solid;
+  margin-top: 1px;
+  padding-bottom: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .site__aside {
+    height: auto;
+  }
+}
+
+.site__aside:hover {
+  height: 15rem;
+}
+@media screen and (min-width: 1000px) {
+  .site__aside:hover {
+    height: auto;
   }
 }
 
