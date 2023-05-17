@@ -1,9 +1,13 @@
-# TP#1
-## 4W4-Conception d'interface et devloppement Web
-### Auteur : Samuel Antenor
+# Auteur : Samuel Antenor
+## TP2 4W4-Conception d'interface et devloppement Web
+### Voici mon site web finalisé pour le cour 4w4
 
-#### Objectifs
-- Présentation de mon TP1/Site 4w4
+#### Éléments Améliorés
+- L'Entete(amélioration du menu burger)
+- Stylisation du sidebar
+- Rajout de section pour mieux organiser le front page
+- Footer
+- Site plus adaptatif
 
 #### Liens de reference
 - Mon site SiteGround
