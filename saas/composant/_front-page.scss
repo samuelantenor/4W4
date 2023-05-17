@@ -10,3 +10,15 @@
       font-size: 2.8rem;
     }
   }
+  .block_galerie h2 {
+    color: #000000;
+    background-color: transparent;
+    width: 100%;
+    padding: 10px 0 10px 0;
+    display: inline;
+    text-align: center;
+    font-size: 1.5rem;
+    @media screen and (min-width: $largeur__tablette) {
+      font-size: 2.8rem;
+    }
+  }

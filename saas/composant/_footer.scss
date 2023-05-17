@@ -1,88 +1,98 @@
+// Site footer
 .site__footer {
     grid-area: footer;
     display: flex;
-    flex-direction: column;
     align-items: center;
-    }
-    
-    .site__footer .colonne {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 1rem;
-    }
-    
-    .site__footer .colonne .lien {
-    padding-right: 1rem;
-    display: flex;
     flex-direction: column;
-    }
-    
-    .site__footer .colonne .info {
-    text-align: center;
-    }
-    
-    .site__footer .colonne .info li {
-    color: #ffffff;
-    }
-    
-    .site__footer .colonne .footer_colonne {
-    width: 30%;
-    padding-right: 1rem;
-    }
-    
-    .site__footer .colonne .footer_colonne div div ul li a {
-    color: #aaa;
-    }
-    
-    .site__footer .colonne .choix {
-    display: flex;
-    }
-    
-    .site__footer .colonne .choix a {
-    text-decoration: none;
-    color: rgb(0, 255, 55);
-    }
-    
-    footer {
     background-color: black;
-    color: rgb(0, 255, 55);
-    padding: 25px;
-    border: rgb(0, 255, 55) dashed 5px;
-    text-decoration: none;
+  
+    // Footer information
+    .information {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-direction: column;
+      
+      padding: 10px 30px 5px 30px;
+  
+      // Adaptation for larger screens
+      @media screen and (min-width: $largeur__bureau) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
     }
-    
-    .colonne1 {
-    display: flex;
-    padding: 30px;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+  
+    // Footer heading
+    h4 {
+      color: #ffffff;
+      font-size: 1.5rem;
     }
-    
-    .colonne1 section {
-    padding: 10px;
+  
+    // Footer logo
+    .footer__logo {
+  
+      // Logo image
+      .custom-logo-link img {
+        width: 85px;
+        height: auto;
+      }
     }
-    
-    .sidebar {
-    display: flex;
-    flex-direction: row;
-    margin: 10px;
-    justify-content: space-between;
-    list-style-type: none;
+  
+    div {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
     }
-    
-    .site__footer {
-    border: 5px dashed rgb(0, 255, 55);
-    color: rgb(0, 255, 55);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+  
+    // Footer choices: links and menu
+    .choix {
+  
+      // List item
+      li {
+        list-style-type: none;
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        background-color: rgb(0, 0, 0);
+  
+        // Adaptation for larger screens
+        @media screen and (min-width: $largeur__bureau) {
+          flex-direction: row;
+        }
+  
+        // Link style
+        a {
+          color: rgb(0, 255, 55);
+          transition: all .5s ease;
+          text-decoration: none;
+        }
+  
+        // Hover effect for links
+        a:hover {
+          background-color: rgb(0,255,55);
+          color: black;
+          padding: 5px;
+          border-radius: 5px;
+        }
+      }
     }
-    
-    .menu-footer-container {
-    color: rgb(0, 255, 55);
+  
+    // Widget styles
+    .widget {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  
+      // Adaptation for larger screens
+      @media screen and (min-width: $largeur__bureau) {
+        flex-direction: row;
+        align-items: flex-start;
+      }
     }
-    
- 
+  
+    // Contacts color
+    .Contacts {
+      color: rgb(0,255,55);
+    }
+  }
+  

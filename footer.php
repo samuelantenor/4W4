@@ -1,60 +1,50 @@
 <footer class="site__footer">
+  <section class="information">
+    <div class="footer__logo">
+        <?php the_custom_logo(); ?>
+    </div>
 
-<section class="colonne">
+    <div class="choix"> 
+      <h4>Menu</h4> 
+      <?php wp_nav_menu(array(
+        "menu" => "entete",
+        "container" => "choix",
+      )); ?>
 
-    <section class="choix">
-        <?php  
-                wp_nav_menu(array( 
-                    "menu" => "entete",
-                    "container" => "nav",
-                )); 
-            ?>
-        </div>
+    </div>
+    <div class="Recherche"> 
+      <h4>Rechercher</h4> 
+      <div class="barreRecherche"><?= get_search_form(); ?></div> 
 
-    </section>
-    
-    <section class="info">
-        <ul>
-            <li>Samuel-André Anténor</li>
-            <li>Concepetion d'interface</li>
-        </ul>
-    </section>
+    </div>
 
-    <section class="lien"> 
-        <?php the_custom_logo();?> 
-        <?= get_search_form(); ?> 
-    </section>
-
-
- 
-
-</section>
-
-<section class="colonne">
-
-    <section class="footer_colonne">
+    <div class="Contacts"> 
+      <h4>Contactez-nous!</h4> 
+        <p>3800 R. Sherbrooke E, Montréal, QC</p>
+        <p>H1X 2A2</p>
+        <p>(514) 254-7131</p>
+    </div>
+  </section>
+  
+  <section class="widget">
+    <div class="footer__col">
       <div class="sidebar">
-      <?php dynamic_sidebar( 'footer_1' ); ?>
+        <?php dynamic_sidebar( 'footer_1' ); ?>
       </div>
-    </section>
-
-    <section class="footer_colonne">
+    </div>
+    <div class="footer__col">
       <div class="sidebar">
-      <?php dynamic_sidebar( 'footer_2' ); ?>
+        <?php dynamic_sidebar( 'footer_2' ); ?>
       </div>
-    </section>
-
-    <section class="footer_colonne">
+    </div>
+    <div class="footer__col">
       <div class="sidebar">
-      <?php dynamic_sidebar( 'footer_3' ); ?>
+        <?php dynamic_sidebar( 'footer_3' ); ?>
       </div>
-    </section>
-
-</section>
+    </div>
+  </section>
 
 </footer>
-
-    <?php wp_footer(); ?> 
-
+  <?php wp_footer(); ?>
 </body>
 </html>

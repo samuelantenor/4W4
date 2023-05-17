@@ -11,6 +11,7 @@ $titre = get_the_title();
 <article class="blocflex__article">
     <?php if(has_post_thumbnail()){
         
+        echo get_the_ID();
     } else{
         echo get_the_post_thumbnail(192,'thumbnail');
     }
