@@ -15,6 +15,16 @@
             "container"=>"nav"));
             ?>
         </section>
+
+        <section class="blocflex block_archive">
+                <h2>nos archives</h2>
+                <?php wp_nav_menu(array(
+                "menu" => "archives",
+                "container" => "nav",
+                "container_class" => "menu__archives"
+                )); ?>
+            </section>
+
         <section class="blocflex block_galerie">
                 <h2>La galerie</h2>
                 <?php
