@@ -41,7 +41,7 @@
 }
 .menu__archives {//nav
     background-color: transparent;
-    
+    margin-bottom : 100px;
 
     .menu { // ul
         
@@ -50,7 +50,7 @@
         .menu-item{ //li
             display : flex;
             flex-direction: column;
-            border : 2px solid #000000;
+            border : 2px dashed #ffffff;
             flex : 1 0 200px;
             height: 50px;
             width: 500px;
