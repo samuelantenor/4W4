@@ -2,7 +2,8 @@
 
 <section class="colonne">
 
-    <section class="choix"><?php  
+    <section class="choix">
+        <?php  
                 wp_nav_menu(array( 
                     "menu" => "entete",
                     "container" => "nav",
