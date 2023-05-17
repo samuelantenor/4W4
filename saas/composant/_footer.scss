@@ -1,12 +1,11 @@
-// Site footer
+
 .site__footer {
     grid-area: footer;
     display: flex;
     align-items: center;
     flex-direction: column;
     background-color: black;
-  
-    // Footer information
+
     .information {
       display: flex;
       align-items: center;
@@ -15,23 +14,23 @@
       
       padding: 10px 30px 5px 30px;
   
-      // Adaptation for larger screens
+
       @media screen and (min-width: $largeur__bureau) {
         flex-direction: row;
         align-items: flex-start;
       }
     }
   
-    // Footer heading
+
     h4 {
       color: #ffffff;
       font-size: 1.5rem;
     }
   
-    // Footer logo
+
     .footer__logo {
   
-      // Logo image
+
       .custom-logo-link img {
         width: 85px;
         height: auto;
@@ -44,10 +43,10 @@
       flex-direction: column;
     }
   
-    // Footer choices: links and menu
+
     .choix {
   
-      // List item
+
       li {
         list-style-type: none;
         display: flex;
@@ -55,7 +54,7 @@
         flex-direction: column;
         background-color: rgb(0, 0, 0);
   
-        // Adaptation for larger screens
+
         @media screen and (min-width: $largeur__bureau) {
           flex-direction: row;
         }
@@ -67,7 +66,7 @@
           text-decoration: none;
         }
   
-        // Hover effect for links
+
         a:hover {
           background-color: rgb(0,255,55);
           color: black;
@@ -77,20 +76,19 @@
       }
     }
   
-    // Widget styles
+
     .widget {
       display: flex;
       flex-direction: column;
       gap: 10px;
   
-      // Adaptation for larger screens
+
       @media screen and (min-width: $largeur__bureau) {
         flex-direction: row;
         align-items: flex-start;
       }
     }
-  
-    // Contacts color
+
     .Contacts {
       color: rgb(0,255,55);
     }

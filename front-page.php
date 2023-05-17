@@ -7,7 +7,7 @@
 <?php get_header(); ?>
     <main class="site__main">
         <section class="front-page">
-        <section class="blocflex block_evenement">
+        <section class="blocflex section_evenement">
 
         <h2>Nos Évenement!</h2>
         <?php wp_nav_menu(array(
@@ -16,7 +16,7 @@
             ?>
         </section>
 
-        <section class="blocflex block_archive">
+        <section class="blocflex section_archive">
                 <h2>nos archives</h2>
                 <?php wp_nav_menu(array(
                 "menu" => "archives",
@@ -25,7 +25,7 @@
                 )); ?>
             </section>
 
-        <section class="blocflex block_galerie">
+        <section class="blocflex section_galerie">
                 <h2>La galerie</h2>
                 <?php
                     $args = array(
@@ -42,7 +42,7 @@
                 ?>
             </section>
 
-            <section class="blocflex block_ndc"> 
+            <section class="blocflex section_ndc"> 
                 <h2>Notes de cours 4w4</h2> 
                 <div>
                     <?php if(have_posts()):

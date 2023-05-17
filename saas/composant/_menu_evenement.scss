@@ -1,14 +1,14 @@
 .menu-evenement-container
- {//nav
+ {
     background-color: transparent;
-    .menu { // ul
+    .menu {
         @media screen and (min-width: $largeur__tablette) {
             display : flex;
         justify-content: space-between; 
         }
         
 
-        .menu-item{ //li
+        .menu-item{
             display : flex;
             flex-direction: column;
             border : 2px solid #15ff00;
@@ -39,15 +39,15 @@
         }
     }
 }
-.menu__archives {//nav
+.menu__archives {
     background-color: transparent;
     margin-bottom : 100px;
 
-    .menu { // ul
+    .menu {
         
         
 
-        .menu-item{ //li
+        .menu-item{
             display : flex;
             flex-direction: column;
             border : 2px dashed #ffffff;
