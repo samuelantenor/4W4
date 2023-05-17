@@ -1,47 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <title>mon 4W4</title>
     <?php wp_head(); ?>
 </head>
-<?php
-$nouvel_class="";
- if (is_front_page()) {
-    $nouvel_class = "no-aside";
- }?>
 
-<body class="custom-background site <?= $nouvel_class ?>">
-    <header class="site__entete">
-    <section class="entete__nav">
-            <?php the_custom_logo(); ?> 
-            <div class="menu__recherche">
-                <input type="checkbox"  id="chkBurger"> 
-                <?php  wp_nav_menu(array( 
-                                "menu" => "entete",
-                                "container" => "nav",
-                                "container_class" => "menu__entete"
+<body>
+    <?php
+    $nouvel_class = "";
+    if (is_front_page()) {
+        $nouvel_class = "no-aside";
+    }
+    ?>
+    <body class="site custom-background <?= $nouvel_class ?>">
+        <header class="site__entete">
+            <section class="entete__nav">
+                <?php the_custom_logo(); ?>
 
-                            )); ?>
-                 
+                <div class="menu__recherche">
+                    <input type="checkbox" id="chkBurger">
+                    <?php
+                    wp_nav_menu(array(
+                        "menu" => "entete",
+                        "container" => "nav",
+                        "container_class" => "menu__entete"
+                    ));
+                    ?>
+                    <div class="barreRecherche"><?= get_search_form(); ?></div>
+                    <label class="burger" for="chkBurger">
+                        <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=d0d0d0" width="32" height="32">
+                    </label>
+                </div>
                 
-                <label class="burger" for="chkBurger">
-                    <img src="https://s2.svgbox.net/hero-outline.svg?ic=menu&color=d0d0d0" width="32" height="32">
-                </label> 
-            </div>         
-        </section>
-        <div class="barreRecherche"><?= get_search_form(); ?></div> 
-    
-    <h1><a class="site__titre" href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a></h1>
-    <h2><?= bloginfo('description'); ?></h2>
-    
-</header>
+            </section>
+            <h1>
+                <a class="site__titre" href="<?= bloginfo('url'); ?>"><?= bloginfo('name'); ?></a>
+            </h1>
+            <h2><?= bloginfo('description'); ?></h2>
+        </header>
+        <?php
+        if (!is_front_page() && !is_404()) {
+            get_template_part("template-parts/aside");
+        }
+        ?>
+</body>
 
-<?php 
-if(!is_front_page() && ! is_404()){
-    get_template_part("template-parts/aside");
-}
-?> 
+</html>

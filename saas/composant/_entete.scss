@@ -5,6 +5,7 @@
     grid-area: header;
     background-color: transparent;
 }
+
 /////////////Mise en page du main  ///////////////////////////////
 
 .site__main{
@@ -14,46 +15,64 @@
     background-color:rgb(0, 0, 0);
 }
 
-
-.entete__nav{ // log, menu, form de recherche, bouton burger
-    display : flex;
+.entete__nav { // barre de navigation
+    display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
- 
+
+    @media screen and (min-width : $largeur__bureau) {
+      flex-direction: row;
+    }
+    @media screen and (max-width : $largeur__tablette) {
+        flex-direction: column;
+        
+      }
 }
-
-
 
 .site__titre {
     font-size: clamp(1rem, 0.3864rem + 2.4545vw, 4.375rem);
-        text-decoration: none;
-
+    text-decoration: none;
 }
 
-.menu__recherche { // menu, form de recher, bouton
-    display : flex;
-    flex-direction: column-reverse;
-    align-items: flex-end;
+.menu__recherche { // barre de navigation
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
     @media screen and (min-width : $largeur__bureau) {
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-end;
+      flex-direction: row;
     }
 }
 
-
 /* ///////////////////////////////// menu__entete */
-.menu__entete{ // nav
+.menu__entete { // nav
     display: flex;
-        transform: translateX(150%);
-        transition: transform .5s;
-        
-        @media screen and (min-width: $largeur__tablette) {
-           // position : static;
-            transform: translateX(0); 
-        }
+    flex-direction: column;
+    position: fixed;  /* Make the nav fixed */
+    top: 0;           /* Starting from the top */
+    right: 0;         /* Starting from the right */
+    width: 50%;       /* Half of the screen */
+    height: 100vh;    /* Full height */
+    background-color: rgba(0, 0, 0, 0.9); /* Background color */
+    transform: translateX(100%); /* Hide it off screen (right side) */
+    transition: transform 0.5s ease-out; /* Animate the transition */
+    z-index: 1000; /* High z-index to get it on top of other elements */
+
+    @media screen and (min-width : $largeur__bureau) {
+      position: static;
+      width: auto;
+      height: auto;
+      background-color: transparent;
+      transform: translateX(0);
+      display: flex;
+      flex-direction: row;
+    }
+
     .menu { // ul
         display: flex;
+        flex-direction: column;
         flex: 1 0 auto;
         list-style-type: none;
         justify-content: flex-start;
@@ -62,25 +81,23 @@
             flex-direction: row;
             align-items: center; 
         }
-        .menu-item{//li
 
+        .menu-item{//li
             a{
-        padding: 5px;
-        background-color: rgb(0, 0, 0);
-        margin: 5px;
-        color: rgb(0, 255, 55);
-        border-radius: 5px;
-        text-decoration: none;
-        transition: background-color 0.5s ease, color 0.3s ease;
+                padding: 5px;
+                background-color: rgb(0, 0, 0);
+                margin: 5px;
+                color: rgb(0, 255, 55);
+                border-radius: 5px;
+                text-decoration: none;
+                transition: background-color 0.5s ease, color 0.3s ease;
             }
             a:hover{
                 background-color: rgb(0, 255, 55);
                 color: rgb(0, 0, 0);
             }
         }
-
     }
-
 }
 
 /* ---------------------------------------- pour annuler le pseude element ::before */
@@ -92,26 +109,27 @@
     margin-inline-end: 0;
     width: 0;
     height: 0;
-      }
-      ul li li::before
-      {
-        background: transparent;
-        content: "";
-      }
+}
+
+ul li li::before
+{
+    background: transparent;
+    content: "";
+}
+
 /* ---------------------------------------------------------- bouton burger  */     
 .burger {
     display : block; 
-    @media screen and (min-width: $largeur__tablette) {
+    @media screen and (min-width: $largeur__bureau) {
      display : none;
     }
-    
-
 } 
+
 #chkBurger:checked ~ .menu__entete {
     transform : translateX(0);
+    top:30%;
 }
 
 #chkBurger {
     display : none;
-
 }

@@ -437,8 +437,19 @@ pre {
 
 .entete__nav {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .entete__nav {
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 768px) {
+  .entete__nav {
+    flex-direction: column;
+  }
 }
 
 .site__titre {
@@ -448,35 +459,49 @@ pre {
 
 .menu__recherche {
   display: flex;
-  flex-direction: column-reverse;
-  align-items: flex-end;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .menu__recherche {
     flex-direction: row;
-    align-items: center;
-    justify-content: flex-end;
   }
 }
 
 /* ///////////////////////////////// menu__entete */
 .menu__entete {
   display: flex;
-  transform: translateX(150%);
-  transition: transform 0.5s;
+  flex-direction: column;
+  position: fixed; /* Make the nav fixed */
+  top: 0; /* Starting from the top */
+  right: 0; /* Starting from the right */
+  width: 50%; /* Half of the screen */
+  height: 100vh; /* Full height */
+  background-color: rgba(0, 0, 0, 0.9); /* Background color */
+  transform: translateX(100%); /* Hide it off screen (right side) */
+  transition: transform 0.5s ease-out; /* Animate the transition */
+  z-index: 1000; /* High z-index to get it on top of other elements */
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .menu__entete {
+    position: static;
+    width: auto;
+    height: auto;
+    background-color: transparent;
     transform: translateX(0);
+    display: flex;
+    flex-direction: row;
   }
 }
 .menu__entete .menu {
   display: flex;
+  flex-direction: column;
   flex: 1 0 auto;
   list-style-type: none;
   justify-content: flex-start;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .menu__entete .menu {
     flex-direction: row;
     align-items: center;
@@ -516,7 +541,7 @@ ul li li::before {
 .burger {
   display: block;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1024px) {
   .burger {
     display: none;
   }
@@ -524,6 +549,7 @@ ul li li::before {
 
 #chkBurger:checked ~ .menu__entete {
   transform: translateX(0);
+  top: 30%;
 }
 
 #chkBurger {
@@ -629,7 +655,7 @@ h3 {
   flex-direction: column;
   padding: 10px 30px 5px 30px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .site__footer .information {
     flex-direction: row;
     align-items: flex-start;
@@ -655,7 +681,7 @@ h3 {
   flex-direction: column;
   background-color: rgb(0, 0, 0);
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .site__footer .choix li {
     flex-direction: row;
   }
@@ -676,7 +702,7 @@ h3 {
   flex-direction: column;
   gap: 10px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .site__footer .widget {
     flex-direction: row;
     align-items: flex-start;
@@ -726,7 +752,7 @@ body li::before {
   flex-direction: column;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .block_ndc div {
     flex-direction: row;
   }
@@ -776,7 +802,7 @@ body li::before {
   flex-direction: row;
   flex-wrap: wrap;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .menu-cours-container .menu {
     flex-direction: column;
     justify-content: flex-start;
@@ -792,7 +818,7 @@ body li::before {
   align-items: center;
   padding: 10px;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .menu-cours-container .menu .menu-item a {
     justify-content: flex-start;
     flex-wrap: nowrap;
@@ -801,7 +827,7 @@ body li::before {
 .menu-cours-container .menu .menu-item a p {
   display: none;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .menu-cours-container .menu .menu-item a p {
     display: block;
   }
@@ -942,7 +968,7 @@ body li::before {
   text-align: center;
   font-size: 1.5rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .site__main h2 {
     font-size: 2.8rem;
   }
@@ -957,7 +983,7 @@ body li::before {
   text-align: center;
   font-size: 1.5rem;
 }
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
   .block_galerie h2 {
     font-size: 2.8rem;
   }
@@ -969,7 +995,7 @@ body li::before {
   grid-template-columns: auto;
   grid-template-areas: "header" "aside" "main" "footer";
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .site {
     grid-template-columns: 20% auto;
     grid-template-areas: "header header" "aside main" "footer footer";
@@ -979,7 +1005,7 @@ body li::before {
 .no-aside {
   grid-template-areas: "header" "main" "footer";
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .no-aside {
     grid-template-columns: auto;
     grid-template-areas: "header" "main" "footer";
@@ -1013,7 +1039,7 @@ body li::before {
   background-color: rgb(0, 255, 55);
   color: black;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .site__aside {
     height: auto;
   }
@@ -1022,7 +1048,7 @@ body li::before {
 .site__aside:hover {
   height: 15rem;
 }
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1024px) {
   .site__aside:hover {
     height: auto;
   }
