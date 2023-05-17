@@ -6,11 +6,10 @@
 
 <?php get_header(); ?>
     <main class="site__main">
-        <h3>Bienvenue sur mon site!</h3>
         <section class="front-page">
         <section class="blocflex block_evenement">
 
-        <h3>Nos Évenement!</h3>
+        <h2>Nos Évenement!</h2>
         <?php wp_nav_menu(array(
             "menu"=>"evenement",
             "container"=>"nav"));
@@ -34,7 +33,7 @@
             </section>
 
             <section class="blocflex block_ndc"> 
-                <h2>Les notes de cours</h2> 
+                <h2>Notes de cours 4w4</h2> 
                 <div>
                     <?php if(have_posts()):
                         while (have_posts()): the_post(); 
