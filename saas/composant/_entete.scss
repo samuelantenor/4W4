@@ -24,9 +24,8 @@
     @media screen and (min-width : $largeur__bureau) {
       flex-direction: row;
     }
-    @media screen and (max-width : $largeur__tablette) {
+    @media screen and (min-width : $largeur__tablette) {
         flex-direction: column;
-        
       }
 }
 

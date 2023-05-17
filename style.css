@@ -446,7 +446,7 @@ pre {
     flex-direction: row;
   }
 }
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) {
   .entete__nav {
     flex-direction: column;
   }
@@ -733,6 +733,7 @@ body li::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .block_galerie {
@@ -926,9 +927,11 @@ body li::before {
 .menu-evenement-container {
   background-color: transparent;
 }
-.menu-evenement-container .menu {
-  display: flex;
-  justify-content: space-between;
+@media screen and (min-width: 768px) {
+  .menu-evenement-container .menu {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 .menu-evenement-container .menu .menu-item {
   display: flex;

@@ -1,8 +1,11 @@
 .menu-evenement-container {//nav
     background-color: transparent;
     .menu { // ul
-        display : flex;
-        justify-content: space-between;
+        @media screen and (min-width: $largeur__tablette) {
+            display : flex;
+        justify-content: space-between; 
+        }
+        
 
         .menu-item{ //li
             display : flex;
