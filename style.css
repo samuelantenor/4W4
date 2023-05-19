@@ -880,12 +880,6 @@ body li::before {
 .error-404 .menu li:last-child {
   margin-right: 0;
 }
-.error-404 .custom-background .site {
-  background-image: url(../image/matrix.jpg);
-  background-size: cover;
-  background-position: center center;
-  background-repeat: no-repeat;
-}
 .error-404 .search-form-container-404 .aside {
   display: none;
 }
@@ -961,7 +955,7 @@ body li::before {
 .menu-evenement-container .menu .menu-item {
   display: flex;
   flex-direction: column;
-  border: 2px solid #15ff00;
+  border: 2px solid #ffffff;
   flex: 1 0 200px;
   height: auto;
   margin: 10px;
@@ -982,42 +976,6 @@ body li::before {
   font-size: 0.8rem;
 }
 .menu-evenement-container .menu .menu-item a .menu-thumbnail {
-  display: block;
-  width: 150px;
-  height: 150px;
-}
-
-.menu__archives {
-  background-color: transparent;
-  margin-bottom: 100px;
-}
-.menu__archives .menu .menu-item {
-  display: flex;
-  flex-direction: column;
-  border: 2px dashed #ffffff;
-  flex: 1 0 200px;
-  height: 50px;
-  width: 500px;
-  align-items: center;
-  justify-content: center;
-  background-color: #000000;
-}
-.menu__archives .menu .menu-item a {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  color: rgb(0, 255, 55);
-}
-.menu__archives .menu .menu-item a .title {
-  font-size: 1.5rem;
-}
-.menu__archives .menu .menu-item a .description {
-  font-size: 0.8rem;
-}
-.menu__archives .menu .menu-item a .menu-thumbnail {
   display: block;
   width: 150px;
   height: 150px;
@@ -1066,6 +1024,90 @@ body li::before {
   .section_archive h2 {
     font-size: 2.8rem;
   }
+}
+
+.menu__archives {
+  background-color: transparent;
+  margin-bottom: 100px;
+}
+.menu__archives .menu .menu-item {
+  display: flex;
+  flex-direction: column;
+  border: 2px dashed #ffffff;
+  flex: 1 0 200px;
+  height: 150px;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+  background-color: #000000;
+}
+.menu__archives .menu .menu-item a {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  text-decoration: none;
+  color: rgb(0, 255, 55);
+}
+.menu__archives .menu .menu-item a .title {
+  font-size: 1.5rem;
+}
+.menu__archives .menu .menu-item a .description {
+  font-size: 0.8rem;
+}
+.menu__archives .menu .menu-item a .menu-thumbnail {
+  display: block;
+  width: 150px;
+  height: 150px;
+}
+
+.img__archive {
+  width: 10%;
+  height: 50px;
+  object-fit: cover;
+  background-repeat: no-repeat;
+  top: 3rem;
+}
+
+.bloc__cours .img__archive {
+  background-image: url("https://s2.svgbox.net/hero-outline.svg?ic=academic-cap");
+}
+
+.bloc__4w4 .img__archive {
+  background-image: url("https://s2.svgbox.net/hero-outline.svg?ic=academic-cap");
+}
+
+.nouveaute {
+  border: rgb(0, 255, 55) 4px solid;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.nouveaute ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.nouveaute li {
+  margin: 10px;
+  background-color: rgb(0, 255, 55);
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+.nouveaute li a {
+  text-decoration: none;
+  color: black;
+}
+.nouveaute li:hover {
+  background-color: black;
+}
+.nouveaute li:hover a {
+  text-decoration: none;
+  color: rgb(0, 255, 55);
 }
 
 /* --------------------------------------------- layout */

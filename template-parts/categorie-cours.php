@@ -10,6 +10,15 @@ $titre_long = substr($titre, 7, -5);
 $duree = substr($titre, strpos($titre,'('));
 ?>
 <article class="blocflex__article">
+<?php  if(has_post_thumbnail()) {
+    the_post_thumbnail('thumbnail');
+ // echo get_the_ID();
+  } 
+else {
+
+    echo get_the_post_thumbnail(192,'thumbnail' );
+  }
+?>
     <h5><a href="<?php the_permalink(); ?>"> <?= $sigle; ?></a></h5>
     <h6><?= $titre_long; ?></h6>
     <p><?= wp_trim_words(get_the_excerpt(), 15) ?></p>

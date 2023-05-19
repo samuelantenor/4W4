@@ -6,8 +6,8 @@
     
         <h3>Menu secondaire</h3>
        <?php 
-            $menu = "cour";
-            if(in_category('Cours')){ $menu='Cours';}
+            $menu = "note-4w4";
+            if(in_category('cours')){ $menu='cours';}
             // $menu peut prendre les valeurs : "notes-4w4" ou "cours"
             wp_nav_menu(array(
             "menu" => $menu,

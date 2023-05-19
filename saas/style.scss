@@ -21,9 +21,7 @@ Text Domain: 4w4-Samuel-Antenor
 /* --------------------------------------------- base */
 @import "base/heading";
 @import "base/markdown";
-// @import "base/espacement";
-// @import "base/lien";
-// @import "base/list";
+
 
 /* --------------------------------------------- composant */
  @import "composant/entete";
@@ -38,6 +36,11 @@ Text Domain: 4w4-Samuel-Antenor
  @import "composant/Erreur_404";
  @import "composant/menu_evenement";
  @import "composant/front-page";
+ @import "composant/menu_archives";
+ @import "composant/nouveauté";
+
+ 
+ 
  /* --------------------------------------------- layout */
  @import "layout/aside-contenu";
  /*---------------------------------------------- normalize*/

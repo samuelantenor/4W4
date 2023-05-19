@@ -7,6 +7,24 @@
 <?php get_header(); ?>
     <main class="site__main">
         <section class="front-page">
+
+        <div class="nouveaute">
+                
+            <p>Découvrez nos derniers articles :</p>
+				<ul>
+					<?php
+						$my_query = new WP_Query('showposts=5');
+						while ($my_query->have_posts()) : $my_query->the_post();
+					?>
+					<li>
+						<a href="<?php the_permalink() ?>"><?php the_title(); ?></a>
+					</li>
+					<?php
+						endwhile;
+					?>
+				</ul>
+            </div>
+
         <section class="blocflex section_evenement">
 
         <h2>Nos Évenement!</h2>
@@ -19,7 +37,7 @@
         <section class="blocflex section_archive">
                 <h2>nos archives</h2>
                 <?php wp_nav_menu(array(
-                "menu" => "archives",
+                "menu" => "bloc-archive",
                 "container" => "nav",
                 "container_class" => "menu__archives"
                 )); ?>
@@ -45,14 +63,17 @@
             <section class="blocflex section_ndc"> 
                 <h2>Notes de cours 4w4</h2> 
                 <div>
-                    <?php if(have_posts()):
-                        while (have_posts()): the_post(); 
-                            if (!in_category('galerie')) {
-                                $la_categorie = 'note-4w4';
-                                get_template_part("template-parts/categorie", $la_categorie);
-                            }
-                        endwhile; 
-                    endif; ?>
+                <?php 
+                if (have_posts()):
+                    while(have_posts()): the_post(); // extrait un objet "post" 
+                         $la_categorie = 'note-4w4';
+                         if(in_category("cours")) {
+                            $la_categorie = 'cours';}
+                       
+                        
+                        get_template_part("template-parts/categorie",$la_categorie); ?>
+                    <?php endwhile; ?>
+                <?php endif; ?>
                 </div>
             </section>
 

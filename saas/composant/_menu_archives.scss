@@ -1,21 +1,23 @@
-.menu-evenement-container
- {
+.menu__archives {
     background-color: transparent;
+    margin-bottom : 100px;
+
     .menu {
-        @media screen and (min-width: $largeur__tablette) {
-            display : flex;
-        justify-content: space-between; 
-        }
+        
         
 
         .menu-item{
             display : flex;
             flex-direction: column;
-            border : 2px solid #ffffff;
+            border : 2px dashed #ffffff;
             flex : 1 0 200px;
-            height: auto;
-            margin : 10px;
-
+            height: 150px;
+            width: 500px;
+            
+            align-items: center;
+            justify-content: center;
+            background-color: #000000;
+            
             a{
                 display : flex;
                 flex-direction: column;
@@ -23,7 +25,7 @@
                 align-items: center;
                 text-align: center;
                 text-decoration: none;
-                color: #15ff00;
+                color: rgb(0,255,55);
                 .title{
                     font-size: 1.5rem;
                 }
@@ -38,4 +40,27 @@
             }
         }
     }
+}
+
+.img__archive {
+
+    width: 10%;
+    height: 50px;
+    object-fit: cover;
+    background-repeat: no-repeat;
+
+    top:3rem;
+    
+}
+
+.bloc__cours .img__archive {
+
+    background-image: url("https://s2.svgbox.net/hero-outline.svg?ic=academic-cap");
+    
+}
+
+.bloc__4w4 .img__archive {
+
+    background-image: url("https://s2.svgbox.net/hero-outline.svg?ic=academic-cap");
+    
 }
