@@ -9,7 +9,7 @@
     <main class="site__main">
         <section class="front-page">
 
-        <section class="blocflex section_evenement">
+        <section class="blocflex section_atelier">
 
 <h2>Atelier 2023</h2>
 <?php wp_nav_menu(array(

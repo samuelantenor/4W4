@@ -14,5 +14,6 @@
             "container" => "nav",
     
             )) ?>
+            <?php the_post_thumbnail('thumbnail'); ?>
 
     </aside>

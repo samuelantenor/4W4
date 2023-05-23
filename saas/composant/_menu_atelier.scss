@@ -1,42 +1,35 @@
-.menu-evenement-container,
-.menu
- {
-    background-color: transparent;
-    .menu {
-        @media screen and (min-width: $largeur__tablette) {
-            display : flex;
-        justify-content: space-between; 
-        }
-        
+.section_atelier{
+    border: red 4px solid;
+    width: 100%;
+    .menu-item{
+        display : flex;
+        flex-direction: column;
+        border : 2px solid rgb(0,255,55);
+        border-radius: 5px;
+        flex : 1 0 200px;
+        height: auto;
+        margin : 10px;
 
-        .menu-item{
+        a{
             display : flex;
             flex-direction: column;
-            border : 2px solid #ffffff;
-            flex : 1 0 200px;
-            height: auto;
-            margin : 10px;
-
-            a{
-                display : flex;
-                flex-direction: column;
-                justify-content: space-between;
-                align-items: center;
-                text-align: center;
-                text-decoration: none;
-                color: #15ff00;
-                .title{
-                    font-size: 1.5rem;
-                }
-                .description{
-                    font-size:.8rem;
-                }
-                .menu-thumbnail{
-                    display : block;
-                    width : 150px;
-                    height : 150px;
-                }
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            text-decoration: none;
+            color: #15ff00;
+            .title{
+                font-size: 1.5rem;
+            }
+            .description{
+                font-size:.8rem;
+            }
+            .menu-thumbnail{
+                display : block;
+                width : 150px;
+                height : 150px;
             }
         }
     }
+    
 }
