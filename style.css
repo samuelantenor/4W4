@@ -1125,7 +1125,6 @@ body li::before {
 }
 
 .section_atelier {
-  border: red 4px solid;
   width: 100%;
 }
 .section_atelier .menu-item {
@@ -1188,6 +1187,29 @@ body li::before {
   display: flex;
   flex-wrap: wrap;
   list-style-type: none;
+}
+
+main.site__main table {
+  width: 50%;
+  border-collapse: collapse;
+  color: rgb(0, 255, 55);
+  font-family: Arial, sans-serif;
+}
+main.site__main th, main.site__main td {
+  border: 1px solid rgb(255, 255, 255);
+  padding: 10px;
+  text-align: left;
+}
+main.site__main th {
+  background-color: black;
+  color: rgb(0, 255, 55);
+}
+main.site__main td {
+  background-color: rgb(0, 0, 0);
+  color: rgb(0, 255, 55);
+}
+main.site__main tr:nth-child(even) td {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 /* --------------------------------------------- layout */
