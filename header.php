@@ -12,10 +12,15 @@
 
 <body>
     <?php
-    $nouvel_class = "";
-    if (is_front_page()) {
-        $nouvel_class = "no-aside";
-    }
+      $nouvel_class = "";
+      if  (is_front_page() || 
+          (! in_category("cours") && ! in_category("4w4")) ){
+            $nouvel_class = 'no-aside';
+          }
+      if (is_page_template('template-atelier.php')) {
+           $nouvel_class = '';
+      }
+    
     ?>
     <body class="site custom-background <?= $nouvel_class ?>">
         <header class="site__entete">
@@ -44,9 +49,13 @@
             <h2><?= bloginfo('description'); ?></h2>
         </header>
         <?php
-        if (!is_front_page() && !is_404()) {
+        if (!is_front_page() && !is_404() && !is_page_template('template-atelier.php')) {
             get_template_part("template-parts/aside");
         }
+        if(is_page_template('template-atelier.php')){
+            get_template_part("template-parts/aside-atelier");  
+        }
+        
         ?>
 </body>
 

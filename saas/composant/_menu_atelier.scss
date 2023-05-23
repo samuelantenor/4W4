@@ -1,35 +1,72 @@
-.section_atelier{
+.section_atelier {
     border: red 4px solid;
     width: 100%;
-    .menu-item{
-        display : flex;
+    .menu-item {
+        display: flex;
         flex-direction: column;
-        border : 2px solid rgb(0,255,55);
+        border: 2px solid rgb(0,255,55);
         border-radius: 5px;
-        flex : 1 0 200px;
+        flex: 1 0 200px;
         height: auto;
-        margin : 10px;
+        margin: 10px;
 
-        a{
-            display : flex;
+        a {
+            position: relative; // position relative so the pseudo-element is positioned correctly
+            display: flex;
             flex-direction: column;
             justify-content: space-between;
             align-items: center;
             text-align: center;
             text-decoration: none;
             color: #15ff00;
-            .title{
+            .title,
+            .description {
+                visibility: hidden;
+                transition: color 0.5s ease-in-out; // add transition for color change
+            }
+            .title {
                 font-size: 1.5rem;
             }
-            .description{
-                font-size:.8rem;
+            .description {
+                font-size: .8rem;
             }
-            .menu-thumbnail{
-                display : block;
-                width : 150px;
-                height : 150px;
+            .menu-thumbnail {
+                display: block;
+                width: 150px;
+                height: 150px;
+            }
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: black;
+                z-index: -1;
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform 0.5s ease-in-out;
+            }
+
+            &:hover {
+                .title,
+                .description {
+                    visibility: visible;
+                    color: rgb(0,255,55); // color change on hover
+                }
+
+                &::before {
+                    transform: scaleY(1); // slide down black panel
+                }
             }
         }
     }
-    
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style-type: none;
+    }
 }
