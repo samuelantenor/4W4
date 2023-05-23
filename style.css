@@ -943,16 +943,19 @@ body li::before {
   }
 }
 
-.menu-evenement-container {
+.menu-evenement-container,
+.menu {
   background-color: transparent;
 }
 @media screen and (min-width: 768px) {
-  .menu-evenement-container .menu {
+  .menu-evenement-container .menu,
+  .menu .menu {
     display: flex;
     justify-content: space-between;
   }
 }
-.menu-evenement-container .menu .menu-item {
+.menu-evenement-container .menu .menu-item,
+.menu .menu .menu-item {
   display: flex;
   flex-direction: column;
   border: 2px solid #ffffff;
@@ -960,7 +963,8 @@ body li::before {
   height: auto;
   margin: 10px;
 }
-.menu-evenement-container .menu .menu-item a {
+.menu-evenement-container .menu .menu-item a,
+.menu .menu .menu-item a {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -969,13 +973,16 @@ body li::before {
   text-decoration: none;
   color: #15ff00;
 }
-.menu-evenement-container .menu .menu-item a .title {
+.menu-evenement-container .menu .menu-item a .title,
+.menu .menu .menu-item a .title {
   font-size: 1.5rem;
 }
-.menu-evenement-container .menu .menu-item a .description {
+.menu-evenement-container .menu .menu-item a .description,
+.menu .menu .menu-item a .description {
   font-size: 0.8rem;
 }
-.menu-evenement-container .menu .menu-item a .menu-thumbnail {
+.menu-evenement-container .menu .menu-item a .menu-thumbnail,
+.menu .menu .menu-item a .menu-thumbnail {
   display: block;
   width: 150px;
   height: 150px;

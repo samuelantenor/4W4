@@ -4,9 +4,19 @@
  */
 ?>
 
+
 <?php get_header(); ?>
     <main class="site__main">
         <section class="front-page">
+
+        <section class="blocflex section_evenement">
+
+<h2>Atelier 2023</h2>
+<?php wp_nav_menu(array(
+    "menu"=>"atelier",
+    "container"=>"nav"));
+    ?>
+</section>
 
         <div class="nouveaute">
                 
