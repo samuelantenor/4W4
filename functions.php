@@ -84,6 +84,7 @@ add_filter('nav_menu_item_title', 'perso_menu_item_title', 10, 3);
  */
 function add_menu_description_and_thumbnail( $item_output, $item, $depth, $args ) {
     if ( 'evenement'  == $args->menu ||
+        'atelier'  == $args->menu ||
          'activiter' == $args->menu|| 
          'bloc-archive' == $args->menu ) {
         $post_thumbnail_id = get_post_thumbnail_id( $item->object_id );
